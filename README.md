@@ -159,6 +159,20 @@ Expected output:
 |... |client_nom|pays   |segment...|total_...|nb_achats|...|
 ```
 
+**Terminal 7: Run the Streamlit Interface**
+
+Background (recommended):
+```
+cd /home/ismail/projects/spark_streaming_kafka
+nohup python3 -m streamlit run streamlit_dashboard.py --server.headless=true --server.port=8501 > /tmp/streamlit.log 2>&1 & echo "Streamlit PID: $!"
+```
+
+Foreground (interactive):
+```
+cd /home/ismail/projects/spark_streaming_kafka
+python3 -m streamlit run streamlit_dashboard.py --server.headless=true --server.port=8501
+```
+
 ## 📊 Data Schema
 
 ### Bronze Table (Raw Data)
